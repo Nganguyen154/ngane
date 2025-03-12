@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import joblib
+
+with open("decision_tree_pipeline.pkl", "rb") as file:
+    loaded_pipeline = joblib.load(file)
 
 # Load the pipeline from the pickle file
 with open('decision_tree_pipeline.pkl', 'rb') as file:
